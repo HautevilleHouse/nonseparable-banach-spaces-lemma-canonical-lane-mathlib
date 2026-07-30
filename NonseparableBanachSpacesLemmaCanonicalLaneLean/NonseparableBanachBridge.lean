@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import NonseparableBanachSpacesLemmaCanonicalLaneLean.NonseparableBanachLemma
+import NonseparableBanachSpacesLemmaCanonicalLaneLean.NonseparableBanachAdmittedObject
+
+namespace HautevilleHouse
+namespace NonseparableBanachSpacesLemmaCanonicalLaneLean
+
+structure NonseparableBanachBridgePackage (P : NonseparableBanachLemmaPackage) where
+  closureBridge : NonseparableBanachLemmaClosed P → NonseparableBanachAdmittedObject
+  bridgePreservesAdmissible : Prop
+
+def NonseparableBanachBridgeClosed {P : NonseparableBanachLemmaPackage} (B : NonseparableBanachBridgePackage P) : Prop :=
+  B.bridgePreservesAdmissible
+
+end NonseparableBanachSpacesLemmaCanonicalLaneLean
+end HautevilleHouse
